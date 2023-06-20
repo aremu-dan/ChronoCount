@@ -1,31 +1,48 @@
+:root {
+  --main-colo: #F4F9F7;
+  --accent-colo: #000;
+  --seco-colo: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+  position: relative;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: var(--main-colo);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-clock {
+  position: relative;
+  margin: auto;
+  height: 250px;
+  aspect-ratio: 1;
+  /* background-color: red; */
+  border-radius: 50%;
+  top: 50px;
+  overflow: hidden;
 }
+.App-clock_background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: conic-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* filter: invert(100%); */
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  mix-blend-mode: difference; */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 @keyframes App-logo-spin {
